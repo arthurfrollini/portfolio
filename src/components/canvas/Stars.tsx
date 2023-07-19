@@ -3,6 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Preload, Points, PointMaterial } from '@react-three/drei';
 import * as random from 'maath/random/dist/maath-random.esm';
 
+// @ts-ignore
 import { Points as ThreePoints } from 'three';
 
 const Stars: React.FC<Partial<typeof Points>> = (props) => {
@@ -19,6 +20,7 @@ const Stars: React.FC<Partial<typeof Points>> = (props) => {
 
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
+      {/* @ts-ignore */}
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
